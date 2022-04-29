@@ -12,8 +12,19 @@ class Game{
             players.add(player);
             this.currentPlayer = player;
         }
-
     }
+    /*   var winner = didPlayerWin();
+    currentPlayer += 1;
+    if(currentPlayer == players.length)
+        currentPlayer = 0;
+
+    return winner;
+    }else{
+    currentPlayer += 1;
+    if(currentPlayer == players.length)
+        currentPlayer = 0;
+    return true;
+    }}*/
 }
 import { Players } from "players.js";
 module.exports = Game;
