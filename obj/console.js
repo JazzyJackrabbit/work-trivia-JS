@@ -5,4 +5,3 @@ class Console{
         this.prompt = (p)=>prompt(p);
     }
 }
-module.exports = Console;

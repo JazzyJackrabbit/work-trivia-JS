@@ -1,15 +1,36 @@
 require('./game.js');
 
-describe("The test environment", function() {
-  it("should pass", function() {
-    expect(true).toBe(true);
-  });
-
-  it("should access game", function() {
-    expect(Game).toBeDefined();
+describe("Vérification de la création du joueur", function() {
+  it("should Create Player", function() {
+    let PlayerTest = new Player(null,"TEST");
+    expect(Player.Name).toBeDefined("TEST");
   });
 });
 
-describe("Your specs...", function() {
-  // it ...
+describe("Vérification de la création du joueur", function() {
+  it("should Create Question", function() {
+    let QuestionTest = new Question(null,null,"TEST","Sport","Le Sport");
+    expect(QuestionTest.categoryQuestion).toBeDefined("Sport");
+  });
 });
+/*
+do{
+
+
+
+game.roll(Math.floor(Math.random()*6)+ 1);
+
+
+
+if(Math.floor(Math.random()*10)== 7){
+
+notAWinner= game.wrongAnswer();
+
+}else{
+
+notAWinner= game.wasCorrectlyAnswered();
+
+}
+
+
+}while(notAWinner);

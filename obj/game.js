@@ -4,14 +4,22 @@ class Game{
         this.console = new Console(this);
         this.currentPlayer = null;
     }
-    createGame(nPlayers){
+    createGame(){
+        this._createGameNplayers(this.console.prompt("Num of players: "));
+    }
+    _createGameNplayers(nPlayers){
         this.players = new Players(this);
         this.currentPlayer = null;
-        for(let i = nPlayers; i < 0; i--){
-            let player = new player();
-            players.add(player);
+        for(let i = nPlayers; i > 0; i--){
+            let player = new Player();
+            this.players.add(player, nPlayers - i + 1);
             this.currentPlayer = player;
         }
+
+        this.play();
+    }
+    play(){
+        
     }
     /*   var winner = didPlayerWin();
     currentPlayer += 1;
@@ -26,5 +34,3 @@ class Game{
     return true;
     }}*/
 }
-import { Players } from "players.js";
-module.exports = Game;

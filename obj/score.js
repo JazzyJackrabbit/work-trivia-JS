@@ -5,4 +5,3 @@ class Score{
         this.score = 0;
     }
 }
-module.exports = Score;
