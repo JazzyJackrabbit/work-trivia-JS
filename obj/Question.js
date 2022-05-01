@@ -1,18 +1,9 @@
 class Question{
-  constructor(game,player,responseQuestion,categoryQuestion,questionSentence){
+  constructor(game,categoryQuestion,responseQuestion,questionSentence){
       this.game = game;
-      this.player = player;
-      this.responseQuestion = responseQuestion | "";
-      this.categoryQuestion = categoryQuestion | ""; // Sport Science Rock Pop
-      this.questionSentence = questionSentence | "";
-      this.purposeQuestion = purposeQuestion | "";
-
-      // TODO
-      this.responses = ["1","2","3","4"];
-      this.validResponses = ["1","2"];
-      this.typeQuestion = "";
-
-
+      this.responseQuestion = responseQuestion;
+      this.categoryQuestion = categoryQuestion; // Sport Science Rock Pop
+      this.questionSentence = questionSentence;
   }  
 
   /*

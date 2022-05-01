@@ -3,6 +3,7 @@ class Game{
         this.players = new Players(this);
         this.console = new Console(this);
         this.currentPlayer = null;
+        this.questions = new Questions(this);
     }
     createGame(){
         this._createGameNplayers(this.console.prompt("Num of players: "));
@@ -13,13 +14,15 @@ class Game{
         for(let i = nPlayers; i > 0; i--){
             let player = new Player();
             this.players.add(player, nPlayers - i + 1);
-            this.currentPlayer = player;
-        }
+        }           
+        this.currentPlayer = this.players.PlayerList[0];
 
         this.play();
     }
     play(){
-        
+        let isValidResponse = this.questions.getRandomQuestion(this.currentPlayer, "Global");
+        this.console.log(isValidResponse);
+        this.currentPlayer = this.players.next();
     }
     /*   var winner = didPlayerWin();
     currentPlayer += 1;
